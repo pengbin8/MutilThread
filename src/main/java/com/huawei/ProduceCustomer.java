@@ -1,6 +1,7 @@
 package com.huawei;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 /**
@@ -13,7 +14,7 @@ import java.util.List;
  */
 public class ProduceCustomer {
 	
-	private volatile List<Object> objs=new ArrayList<>();
+	private volatile LinkedList<Object> objs=new LinkedList<>();
 	private int max=10;//容器最大容量
 	
 	public synchronized void put() {
