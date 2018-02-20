@@ -18,33 +18,42 @@ public class ProduceCustomer {
 	private int max=10;//容器最大容量
 	
 	public synchronized void put() {
-		while(objs.size()==max) {
-			try {
-				System.out.println("==put wait"+objs.size()+"==");
-				wait();
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+		while(true) {
+			if(objs.size()==max) {
+				try {
+					System.out.println("==put wait"+objs.size()+"==");
+					wait();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			else {
+				System.out.println("==put"+objs.size()+"==");
+				objs.add(new Object());
+				notifyAll();
 			}
 		}
-		System.out.println("==put"+objs.size()+"==");
-		objs.add(new Object());
-		notifyAll();
 	}
 	
 	public synchronized void get() {
-		while(objs.size()==0) {
-			try {
-				System.out.println("==get wait"+objs.size()+"==");
-				wait();
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+		while(true) {
+			if(objs.size()==0) {
+				try {
+					System.out.println("==get wait"+objs.size()+"==");
+					wait();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+					
+				}
+			}
+			else {
+				System.out.println("==get"+objs.size()+"==");
+				objs.remove(0);
+				notifyAll();
 			}
 		}
-		System.out.println("==get"+objs.size()+"==");
-		objs.remove(0);
-		notifyAll();
 	}
 	
 	public static void main(String[] args) {
