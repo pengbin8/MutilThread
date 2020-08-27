@@ -1,14 +1,12 @@
 package com.huawei;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
 
 /**
  * @author apple
  * @date 2018年2月20日-下午5:15:07
  * @description 同步并发容器 （生产者 消费者） 阻塞式
- * @version v1.0.0
+ * @version v1.0.0 
  * @copyRight .huawei.com 
  * @eSpace pwx391198
  */
