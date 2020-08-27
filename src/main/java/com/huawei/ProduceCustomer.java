@@ -9,7 +9,7 @@ import java.util.List;
  * @date 2018年2月20日-下午5:15:07
  * @description 同步并发容器 （生产者 消费者） 阻塞式
  * @version v1.0.0
- * @copyRight .huawei.com
+ * @copyRight .huawei.com 
  * @eSpace pwx391198
  */
 public class ProduceCustomer {

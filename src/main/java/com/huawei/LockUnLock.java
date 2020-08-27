@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
 public class LockUnLock {
 	// 1. 如果s1和s2都是"abc" 那么锁定的是同一个对象，2个是同一把锁，无法造成死锁
 	// 2. s1!=s2 才会死锁
-	// 3. Threading是为了让彼此有时间锁定s1 s2
+	// 3. Threading是为了让彼此有时间锁定s1 s2 
 	// 4. 需要注意的是 如果synchronized中出现异常 会将锁释放。
 	private String s1="abc";
 	private String s2="abd";
