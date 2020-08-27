@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * @author apple
  * @date 2018年2月20日-下午2:23:39
- * @description 死锁
+ * @description 死锁锁锁锁锁
  * @version v1.0.0
  * @copyRight .huawei.com
  * @eSpace pwx391198
